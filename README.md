@@ -1,2 +1,87 @@
 # Learn-Danish
 Learn danich
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dansk Online — 3 niveauer</title>
+<style>
+:root{--accent:#2563eb;--muted:#6b7280;--bg:#f8fafc}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:var(--bg);color:#0f172a}
+header{background:white;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 6px rgba(2,6,23,0.06)}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+nav a{margin-left:14px;color:var(--muted);text-decoration:none}
+main{max-width:1100px;margin:28px auto;padding:0 18px}
+.grid{display:grid;grid-template-columns:320px 1fr;gap:20px}
+aside{background:white;padding:16px;border-radius:12px;height:fit-content}
+.level{padding:12px;border-radius:10px;margin-bottom:10px;cursor:pointer;border:1px solid transparent}
+.level.active{background:linear-gradient(90deg,#eef2ff,#fff);border-color:rgba(37,99,235,0.18)}
+.badge{font-size:12px;padding:4px 8px;border-radius:999px;background:#e6eefc;color:#0f172a}
+section.card{background:white;padding:18px;border-radius:12px}
+h1{font-size:20px;margin:0 0 8px}
+.lesson{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;border:1px dashed transparent}
+.lesson + .lesson{margin-top:8px}
+.btn{padding:8px 12px;border-radius:8px;background:var(--accent);color:white;border:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(37,99,235,0.12)}
+.progress{height:8px;background:#e6eefc;border-radius:999px;overflow:hidden}
+.progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#7c3aed);width:0%}
+footer{max-width:1100px;margin:22px auto;padding:12px 18px;color:var(--muted);font-size:14px}
+.quiz{margin-top:12px}
+.choices button{display:block;width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid #e6eefc;background:white;text-align:left}
+@media (max-width:860px){.grid{grid-template-columns:1fr;}.aside-hidden{display:none}}
+</style>
+</head>
+<body>
+<header>
+<div class="brand">
+<div class="logo">DK</div>
+<div>
+<div style="font-weight:700">Dansk Online</div>
+<div style="font-size:12px;color:var(--muted)">Lær dansk — Begynder · Mellem · Avanceret</div>
+</div>
+</div>
+<nav>
+<a href="#">Om</a>
+<a href="#">Kontakt</a>
+<a class="btn ghost" href="#signup">Tilmeld</a>
+</nav>
+</header>
+
+
+<main>
+<div class="grid">
+<aside>
+<h3 style="margin:0 0 8px">Niveauer</h3>
+<div id="levels">
+<div class="level" data-level="begynder"><strong>Begynder (A1)</strong><div style="font-size:13px;color:var(--muted)">Grundlæggende ord og sætninger</div></div>
+<div class="level" data-level="mellem"><strong>Mellem (B1)</strong><div style="font-size:13px;color:var(--muted)">Samtale og forståelse</div></div>
+<div class="level" data-level="avanceret"><strong>Avanceret (C1)</strong><div style="font-size:13px;color:var(--muted)">Flydende kommunikation</div></div>
+</div>
+
+
+<hr style="margin:12px 0;border:none;border-top:1px solid #eef2f6">
+<div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+<div style="font-size:13px;color:var(--muted)">Total fremgang</div>
+<div id="totalPercent">0%</div>
+</div>
+<div class="progress" aria-hidden><i id="totalBar"></i></div>
+</div>
+
+
+<hr style="margin:12px 0;border:none;border-top:1px solid #eef2f6">
+<div>
+<h4 style="margin:0 0 8px">Hurtig øvelse</h4>
+<button class="btn" id="randomQuiz">Tag en quiz</button>
+</div>
+</aside>
+
+
+<div>
+<section class="card" id="overview">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div>
+</html>
